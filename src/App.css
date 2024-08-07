@@ -2,37 +2,545 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Header Section */
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+
+/* About Section */
+#about {
+  padding: 30px 15px;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.about-heading {
+  text-align: center;
+}
+
+.about-text {
+  flex: 1 1 50%;
+  padding: 20px;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.about-image {
+  flex: 1 1 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Menu Section */
+#menu {
+  padding: 50px 20px;
+  background-color: #000;
+  color: #fff;
+}
+
+.menu {
+  text-align: center;
+}
+
+.menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.menu-item {
+  flex: 1 1 30%;
+  margin: 20px;
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.menu-item:hover {
+  transform: translateY(-25px);
+}
+
+.menu-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.menu-item-info {
+  padding: 20px;
+}
+
+.menu-item-info h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.menu-item-info p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+
+/* Hero Section */
+#hero {
+  background: url('https://image.slidesdocs.com/responsive-images/background/burger-tomato-bread-fast-food-powerpoint-background_307e257d52__960_540.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+.hero-content {
+  z-index: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.order-button {
+  background-color: #ff6347;
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.order-button:hover {
+  background-color: #e5533d;
+}
+
+#hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+
+/* Gallery Section */
+#gallery {
+  padding: 50px 20px;
+  /*background-color: #f4f4f4;*/
+  /*background-color: chocolate;*/
+  background-color: coral;
+  text-align: center;
+}
+
+.gallery-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.gallery-item {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-bottom: 5px solid #ff6347;
+}
+
+.gallery-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: background 0.3s ease;
+}
+
+.gallery-info h3 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+
+.gallery-item:hover .gallery-info {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+
+/* Reservation Section */
+#reservation {
+  padding: 50px 20px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+}
+
+.reservation-container {
+  max-width: 800px;
+  margin: 0 auto;
+  /*background-color: #1a1a1a;*/
+  /*background-color: cornflowerblue;*/
+  /*background-color: crimson;*/
+  /*background-color: darkblue;*/
+  /*background-color: darkmagenta;*/
+  background-color: dodgerblue;
+  /*background-color: deepskyblue;*/
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.reservation-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.reservation-container p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.reservation-form .form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.reservation-form .form-group label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.reservation-form .form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+}
+
+.reserve-button {
+  background-color: #ff6347;
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.reserve-button:hover {
+  background-color: #e5533d;
+}
+
+
+/* Reviews Section */
+#reviews {
+  padding: 50px 20px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+}
+
+.reviews-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.reviews-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.reviews-container p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.reviews-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.review-card {
+  /*background-color: #1a1a1a;*/
+  /*background-color: crimson;*/
+  /*background-color: darkblue;*/
+  background-color: darkmagenta;
+  /*background-color: dodgerblue;*/
+  /*background-color: deepskyblue;*/
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  margin: 20px;
+  flex: 1 1 30%;
+  max-width: 30%;
+}
+
+.review-card p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.review-author {
+  display: flex;
+  align-items: center;
+}
+
+.review-author img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.review-author span {
+  font-size: 1rem;
+}
+
+
+/* Footer Section */
+#footer {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-about, .footer-social {
+  flex: 1 1 45%;
+  margin: 10px;
+}
+
+.footer-about h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.footer-about p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.footer-social h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.footer-social a {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.footer-social img {
+  width: 30px;
+  height: 30px;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  border-top: 1px solid #333;
+  padding-top: 10px;
+}
+
+.footer-bottom p {
+  font-size: 0.9rem;
+}
+
+
+/* Contact Section */
+#contact {
+  padding: 50px 20px;
+  /*background-color: #f4f4f4;*/
+  /*background-color: mediumspringgreen;*/
+  background-color: tomato;
+  color: #333;
+  text-align: center;
+}
+
+.contact-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.contact-header p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contact-info, .contact-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h3, .contact-form h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info li {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.contact-form .form-group label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.contact-form .form-group input,
+.contact-form .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.contact-form .form-group textarea {
+  resize: vertical;
+}
+
+.submit-button {
+  background-color: #ff6347;
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #e5533d;
 }
